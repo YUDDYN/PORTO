@@ -1,0 +1,262 @@
+html {
+    background: linear-gradient(to top right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+
+
+
+
+}
+
+body {
+    margin: 0;
+}
+
+/* ini buat PC */
+@media (min-width: 1024px) {
+
+
+    /* HEADER */
+    header {
+        backdrop-filter: blur(30px);
+        position: sticky;
+        top: 0;
+        left: 0;
+        z-index: 999;
+
+        color: white;
+        padding: 40px 0;
+        border-bottom-left-radius: 18px;
+        border-bottom-right-radius: 18px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        height: 40px;
+
+    }
+
+    /* navbar */
+    .navigasi {
+        display: flex;
+
+    }
+
+    .navbarList {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        height: 70px;
+        font-size: 20px;
+        padding: 32px;
+        box-sizing: border-box;
+
+    }
+
+    .navigasi li {
+        list-style-type: none;
+        padding-left: 15px;
+        padding-right: 15px;
+        font-size: 25px;
+        transition: background 0.3s, color 0.3s, transform 0.2s;
+        border-radius: 10px;
+    }
+
+    .navigasi li:hover {
+        background: linear-gradient(90deg, #a42011 0%, #4c0303 100%);
+        color: #fff;
+        transform: scale(1.08);
+    }
+
+    .navigasi li a {
+        text-decoration: none;
+        color: inherit;
+        font-weight: 500;
+        transition: color 0.3s;
+    }
+
+    .navigasi>li:hover {
+        color: red;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navigasi>li>a {
+        text-decoration: none;
+        color: white;
+    }
+
+
+    .navigasi>li:hover {
+        color: red;
+        transition: all 0.5s ease-in-out;
+    }
+
+    .navigasi>li>a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .awal {
+        color: rgb(255, 0, 0);
+        font-weight: bold;
+    }
+
+    .akhir {
+        color: rgb(244, 244, 244);
+    }
+
+    .merek {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 35px;
+        font-weight: bold;
+        flex-direction: row;
+        padding: 30px 10px 40px 0;
+        text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    /* INI HERO */
+    .section-hero {
+        width: cover;
+        background: linear-gradient(to top right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        align-items: center;
+    }
+
+    .fotoJovan {
+        width: 300px;
+        height: 300px;
+        border-radius: 18%;
+        border: 5px solid rgb(151, 35, 6);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        margin-bottom: 20px;
+    }
+
+    .intro {
+        color: rgb(83, 78, 78);
+        flex: 1;
+        text-align: left;
+    }
+
+    #hero h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+
+    #hero p {
+        font-size: 1.3rem;
+        font-weight: 400;
+    }
+
+    /* INI ABOUT */
+
+    .tentang-saya {
+        font-size: large;
+        /* width: 100%; */
+        min-height: 40vh;
+    }
+
+    #about {
+        background: linear-gradient(to top left, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+        padding: 50px;
+        text-align: left;
+    }
+
+    #about h1 {
+        color: whitesmoke;
+        text-align: justify;
+
+    }
+
+    /* INI SKILLS */
+    #skills {
+        background: linear-gradient(to top right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+        padding: 50px;
+        text-align: center;
+        font-size: large;
+    }
+
+    #skills h1 {
+        color: whitesmoke;
+        display: flex;
+        justify-content: center;
+    }
+
+    #skills ul {
+        display: flex;
+        justify-content: center;
+        gap: 18px;
+        list-style: none;
+        padding: 0;
+    }
+
+    .skills-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        width: 150px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .skills-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+    .skills-card:hover:after {
+        content: attr(data-detail);
+        display: block;
+        margin-top: 10px;
+        font-size: 0.9rem;
+        color: #ddd;
+    }
+
+    /* INI PROJECTS */
+    #projects {
+        font-size: large;
+        /* width: 100%; */
+        min-height: 40vh;
+    }
+
+    .project {
+        background: linear-gradient(to top right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+        padding: 50px;
+        text-align: center;
+        align-items: center;
+    }
+
+    .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .project-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        background: rgba(255, 255, 255, 0.2);
+        border-color: rgba(255, 255, 255, 0.3);
+    }
+
+}
