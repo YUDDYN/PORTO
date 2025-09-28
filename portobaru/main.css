@@ -230,13 +230,26 @@ body {
         font-size: large;
         /* width: 100%; */
         min-height: 40vh;
+
+    }
+
+    .projects {
+
+        background: linear-gradient(to top left, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+        padding: 50px;
+        text-align: center;
     }
 
     .project {
-        background: linear-gradient(to top right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+
         padding: 50px;
         text-align: center;
-        align-items: center;
+        justify-content: center;
+        display: flex;
+        gap: 10px;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+
     }
 
     .project-card {
@@ -250,6 +263,8 @@ body {
         font-weight: bold;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
         transition: transform 0.3s, box-shadow 0.3s;
+        scroll-snap-align: center;
+        flex-shrink: 0;
     }
 
     .project-card:hover {
