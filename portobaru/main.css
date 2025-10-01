@@ -6,7 +6,7 @@ html {
     border-color: #000000;
     border-style: solid;
     border-width: 1px;
-
+padding:1px;
 
 
 
@@ -29,11 +29,11 @@ body {
         z-index: 999;
 
         color: white;
-        padding: 40px 0;
+  
         border-bottom-left-radius: 18px;
         border-bottom-right-radius: 18px;
         box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        height: 40px;
+        height: 70px;
 
     }
 
@@ -125,7 +125,7 @@ body {
         background: linear-gradient(to top right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
         display: flex;
         width: 100%;
-        min-height: 100vh;
+        height: 700px;
         align-items: center;
     }
 
@@ -159,8 +159,7 @@ body {
 
     .tentang-saya {
         font-size: large;
-        /* width: 100%; */
-        min-height: 40vh;
+        /* height: 700px; */
     }
 
     #about {
@@ -181,6 +180,8 @@ body {
         padding: 50px;
         text-align: center;
         font-size: large;
+        /* height: 700px; */
+   
     }
 
     #skills h1 {
@@ -191,6 +192,7 @@ body {
 
     #skills ul {
         display: flex;
+        /* flex-direction: row; */
         justify-content: center;
         gap: 18px;
         list-style: none;
@@ -226,15 +228,15 @@ body {
     }
 
     /* INI PROJECTS */
-    #projects {
+    #project {
         font-size: large;
         /* width: 100%; */
-        min-height: 40vh;
+        /* max-height: 40vh; */
+    overflow-y: hidden;
 
     }
 
     .projects {
-
         background: linear-gradient(to top left, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
         padding: 50px;
         text-align: center;
@@ -243,35 +245,56 @@ body {
     .project {
 
         padding: 50px;
-        text-align: center;
+        /* text-align: center; */
         justify-content: center;
         display: flex;
         gap: 10px;
-        overflow-x: auto;
-        scroll-snap-type: x mandatory;
-
+        overflow: hidden;
+        /* scroll-snap-type: x mandatory; */
+        white-space: nowrap;
+        position: relative;
+        width: 100%;
     }
+.project:hover .container-project {
+    animation-play-state: paused;
+}
+    .container-project {
+        display: inline-block;
+        animation:scroll 15s linear infinite;
+    }
+
 
     .project-card {
         background: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(255, 255, 255, 0.2);
+        /* border: 2px solid rgba(255, 255, 255, 0.2); */
         border-radius: 10px;
         padding: 20px;
-        width: 300px;
+        /* width: 300px; */
         text-align: center;
+        align-items: center;
         color: white;
         font-weight: bold;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
         transition: transform 0.3s, box-shadow 0.3s;
-        scroll-snap-align: center;
-        flex-shrink: 0;
+  
+        display: inline-flex;
+        flex-direction: column;
     }
 
     .project-card:hover {
         transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); */
         background: rgba(255, 255, 255, 0.2);
         border-color: rgba(255, 255, 255, 0.3);
     }
 
+    @Keyframes scroll {
+        from {
+            transform: translateX(0);
+        }
+
+        to {
+            transform: translateX(-65%);
+        }
+    }
 }
