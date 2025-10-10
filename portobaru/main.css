@@ -132,15 +132,28 @@ body {
     .section-hero {
         width: cover;
         background: linear-gradient(to top right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
-        display: flex;
+
         width: 100%;
         height: 100vh;
+
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
+    }
+
+    .foto {
+        display: flex;
         align-items: center;
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
+        padding: 150px;
+
     }
 
     .fotoJovan {
-        width: 300px;
-        height: 300px;
+        width: 320px;
+        height: 320px;
         border-radius: 18%;
         border: 5px solid rgb(151, 35, 6);
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -149,8 +162,12 @@ body {
 
     .intro {
         color: rgb(83, 78, 78);
-        flex: 1;
+        /* flex: 1; */
         text-align: left;
+        grid-column: span 3 / span 3;
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 2;
     }
 
     #hero h2 {
@@ -163,6 +180,47 @@ body {
         /* font-size: 1.3rem; */
         font-weight: 400;
     }
+
+    .sosmed {
+        grid-column: span 3 / span 3;
+        grid-column-start: 3;
+        grid-row-start: 4;
+    }
+
+    .icon-sosmed {
+        width: 30px;
+        height: 30px;
+    }
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
+    }
+
+    .div1 {
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
+    }
+
+    .div2 {
+        grid-column: span 3 / span 3;
+        grid-row: span 2 / span 2;
+        grid-column-start: 3;
+        grid-row-start: 2;
+    }
+
+    .div3 {
+        grid-column: span 3 / span 3;
+        grid-column-start: 3;
+        grid-row-start: 4;
+    }
+
+
+
+
+
 
     /* INI ABOUT */
 
@@ -329,7 +387,7 @@ body {
     .map {
         width: 50%;
         padding: 10px;
-    
+
         border-radius: 15px;
         grid-row: span 4 / span 4;
         grid-row-start: 2;
@@ -362,7 +420,7 @@ body {
         height: 95px;
     }
 
-  
+
     .btn-kirim {
         background: rgb(151, 35, 6);
         color: white;
@@ -374,6 +432,15 @@ body {
         width: 100px;
     }
 
+    Footer {
+        background: linear-gradient(to top left, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
+        color: white;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.15);
 
+    }
 
 }
