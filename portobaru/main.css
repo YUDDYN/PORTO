@@ -314,7 +314,10 @@ body {
         background: linear-gradient(to bottom right, rgb(151, 35, 6), #3a1e1e, rgb(151, 35, 6));
         padding: 50px;
         text-align: center;
-
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(5, 1fr);
+        gap: 8px;
     }
 
     #project h2 {
@@ -324,31 +327,95 @@ body {
         margin-bottom: 30px;
     }
 
+    .judul-project {
+        grid-column: span 6 / span 6;
+    }
+
     .project {
-        display: flex;
-        justify-content: center;
-        gap: 10px;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        grid-template-rows: repeat(10, 1fr);
+        gap: 8px;
     }
 
-
-
-
-    .project-card {
+    /* .project-card {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
         width: 300px;
-        height: 400px;
-        background-color: rgb(100, 100, 100);
-        border-radius: 18px;
-        flex-shrink: 0;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+    } */
 
+    .project1 {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
     }
 
-    .project-card::-webkit-scrollbar() {
-        width: 8px;
+    .project2 {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
+        grid-column-start: 5;
     }
 
-    .project-card:nth-child(even) {
-        background: rgb(151, 35, 6);
+    .project3 {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
+        grid-column-start: 3;
+        grid-row-start: 6;
     }
+
+    .project4 {
+        background: rgba(255, 255, 255, 0.1);
+        border: 2px solid rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        padding: 20px;
+        width: 300px;
+        text-align: center;
+        color: white;
+        font-weight: bold;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s, box-shadow 0.3s;
+        grid-column: span 2 / span 2;
+        grid-row: span 5 / span 5;
+        grid-column-start: 5;
+        grid-row-start: 6;
+    }
+
 
     /* INI KONTAK */
     #kontak {
@@ -398,6 +465,7 @@ body {
     }
 
     .icon {
+        justify-items: center;
         grid-column: span 2 / span 2;
         grid-row-start: 5;
     }
@@ -407,9 +475,6 @@ body {
         grid-column-start: 3;
         grid-row-start: 5;
     }
-
-
-
 
 
     input {
